@@ -1,0 +1,11 @@
+﻿@page "/"
+@using Microsoft.EntityFrameworkCore
+
+@code
+{
+    protected override Task OnInitializedAsync()
+    {
+        var context = new ef_testContext();
+        return context.ATables.ToListAsync();
+    }
+}
